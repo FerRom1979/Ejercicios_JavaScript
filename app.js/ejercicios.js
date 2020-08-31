@@ -195,6 +195,9 @@ const palidromo = (texto = "")=>{
 }
 palidromo('SaLas'); */
 
+
+
+
 /* 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5. */
 
 /* const remover = (texto= "",patron = undefined)=>{
@@ -215,3 +218,73 @@ palidromo('SaLas'); */
 
 }
 remover("xyz1, xyz2, xyz3, xyz4 y xyz5", /xyz/gi); */
+
+
+//9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
+
+/* const numeroAl501_600 = () =>{
+   
+    return console.info(Math.floor(Math.random()*(500-601)) + 601 ) 
+   // solucion del profesor
+   // const aleatorio = ()=> console.info(Math.round((Math.random()* 100) + 500));
+}
+
+numeroAl501_600(); */
+
+
+/* 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true. */
+
+/*  const capicua = (numero = undefined)=>{
+
+    if(!numero) return console.warn('Olvido ingresar un numero');
+
+    //validacion del profe
+    //if(typeof numero !== "number")return console.error('no es un numero);
+
+    if(numero === String) return console.error(`Ha ingresado ${numero} y esto no es un numero `);
+   
+    numero = Math.abs(numero);
+    numeroInvertido = numero.toString();
+    numeroInvertido = numeroInvertido.split('').reverse().join('');
+    numeroInvertido = Number(numeroInvertido);
+
+    if(numero === numeroInvertido){
+
+        return console.info(`El numero ${numero} es capicua`);
+    }
+
+    else{
+        return console.info(`El numero ${numero} no es capicua`);
+    }
+    
+}
+capicua(2000);  */
+ 
+
+
+/* 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120. */
+
+/*  const factorial = (numero = undefined)=>{
+     
+    if(numero === 0){return console.warn('No puede ingresar el cero')}
+     
+    if(typeof numero !== "number") {return console.error('no a ingresado ningun numero');}
+     
+    if(numero < 1) {return console.error('Porfavor ingrese un numero mayor a cero');}
+
+    else{
+        let n_numero = 1;
+        for (let i = 1; i <=numero; i++){
+             n_numero = n_numero * [i];
+       }
+    return console.log(`El factorial del ${numero} es : ${n_numero}`);
+    }
+        
+}
+factorial(); 
+factorial('fernando'); 
+factorial([1,2,3]); 
+factorial(0);
+factorial(-5);
+factorial(5); 
+factorial(8);     */
