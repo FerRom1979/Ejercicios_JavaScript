@@ -288,3 +288,77 @@ factorial(0);
 factorial(-5);
 factorial(5); 
 factorial(8);     */
+
+/* 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true. */
+
+/* const primo = (numero = undefined) => {
+    if(numero === undefined) return console.warn('Olvido poner un numero');
+
+    if(typeof numero !== "number")return console.error('no a ingresado ningun numero');
+
+    if(numero === 0 || numero === 1)return console.error('No debe ingresar el 0 o el 1'); 
+
+    if(Math.sign(numero) === -1) return console.warn('Porfavor intrudusca un numero positivo');
+
+    for (let i = 2;i < numero; i++){
+        if(numero %  [i]=== 0){
+            console.log(numero)
+            return console.info(`${numero} no es un numero primo`);
+        }
+        else{
+            return console.info(`${numero} es un numero primo`);
+        }
+    }
+}
+primo (7);
+primo ();
+primo("1");
+primo(1);
+primo(-7); */
+
+
+/* 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar. */
+
+/* const par = (numero = undefined)=>{
+    if(numero === undefined) return console.warn('Ingrese un numero porfavor');
+
+    if(typeof(numero) !== "number") return console.error(`Ingresaste ${numero} y este no es un numero`);
+
+    if (numero % 2 === 0 ) return console.info(`El numero : ${numero} es un numero par`);
+
+    else return console.log(`el numero : ${numero} es impar`);
+
+}
+
+par(10);
+par(11);
+par(-20);
+par();
+par(0);
+par('1fer'); */
+
+
+/* 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F. */
+
+/* const temperatura = (grados = undefined,tipo = "") =>{
+    if(grados === undefined) return console.warn('Ingrese los grados a convertir');
+
+    if (!tipo)return console.warn('Porfavor ingrese a que medida desea convertir los grados');
+    
+    if(tipo !== "C" && tipo !== "F") return console.warn('Debe ingresar C para convertir a CELSIUS o F para FAHRENHEIT');
+
+    if(tipo === "C"){
+        let f = (grados*1.8)+32
+        return console.info(`${grados}° CELSIUS es igual a ${f}° FAHRENHEIT`);
+    }
+    if(tipo === "F" ){
+        let c = (grados-32)/1.8
+        return console.info(`${grados}° FAHRENHEIT  es igual a ${c}° CELSIUS`);
+    }
+}
+
+temperatura(30,"C");
+temperatura(86,"F");
+temperatura()
+temperatura(32)
+temperatura(32,"a") */
