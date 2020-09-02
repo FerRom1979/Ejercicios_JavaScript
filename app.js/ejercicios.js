@@ -291,7 +291,7 @@ factorial(8);     */
 
 /* 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true. */
 
-/* const primo = (numero = undefined) => {
+/*  const primo = (numero = undefined) => {
     if(numero === undefined) return console.warn('Olvido poner un numero');
 
     if(typeof numero !== "number")return console.error('no a ingresado ningun numero');
@@ -300,10 +300,11 @@ factorial(8);     */
 
     if(Math.sign(numero) === -1) return console.warn('Porfavor intrudusca un numero positivo');
 
-    for (let i = 2;i < numero; i++){
+    for (let i = 2;i < numero; i++){console.log(numero)
         if(numero %  [i]=== 0){
-            console.log(numero)
+            
             return console.info(`${numero} no es un numero primo`);
+            break;
         }
         else{
             return console.info(`${numero} es un numero primo`);
@@ -314,7 +315,9 @@ primo (7);
 primo ();
 primo("1");
 primo(1);
-primo(-7); */
+primo(-7);
+primo(200);
+primo(false);  */
 
 
 /* 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar. */
@@ -340,10 +343,10 @@ par('1fer'); */
 
 /* 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F. */
 
-/* const temperatura = (grados = undefined,tipo = "") =>{
+/* const temperatura = (grados = undefined,tipo = undefined) =>{
     if(grados === undefined) return console.warn('Ingrese los grados a convertir');
 
-    if (!tipo)return console.warn('Porfavor ingrese a que medida desea convertir los grados');
+    if(tipo === undefined)return console.warn('Porfavor ingrese a que medida desea convertir los grados');
     
     if(tipo !== "C" && tipo !== "F") return console.warn('Debe ingresar C para convertir a CELSIUS o F para FAHRENHEIT');
 
@@ -362,3 +365,85 @@ temperatura(86,"F");
 temperatura()
 temperatura(32)
 temperatura(32,"a") */
+
+
+/* 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10. */
+
+/* const convercionBinaria = (numero = undefined  ,base = undefined)=>{
+    if(numero === undefined) return console.warn('No ingresaste el numero a convertir');
+    
+    if (typeof numero !== "number") return console.war('El valor ingresado a convertir no es un numero');
+
+    if(base === undefined) return console.warn('No ingresaste la base');
+
+    if (typeof base !== "number") return console.warn('El valor ingresado como base no es un numero');
+
+    if (base ===2 ){
+        return console.info(`El numero ${numero} en base ${base} = ${parseInt(numero,base)} base 10`);
+    }else if(base === 10){
+        return console.info(`El numero ${numero} en base ${base} es = ${(numero.toString(2))} base 2`);
+    }else{
+        return console.warn('El tipo de base no es valido');
+    }
+}
+convercionBinaria(100,);
+convercionBinaria();
+convercionBinaria(100,"2");
+convercionBinaria(100,2);
+convercionBinaria(1110010,2);
+convercionBinaria(4,10); */
+
+
+/* 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800. */
+
+
+
+/* const descuento = (monto= undefined,descuento = undefined)=>{
+
+    if (monto === undefined)return console.warn('Ingrese el monto a pagar');
+
+    if(descuento === undefined)return console.warn('Que descuento aplicara');
+
+    if(typeof(monto) !=="number" || typeof(descuento) !=="number") return console.error('Algunos de los valores o los dos no corresponden a un numero');
+
+    if(Math.sign(monto) === -1 || Math.sign(descuento) === -1) return console.error('Algunos de los valores o los dos son numeros negativos');
+
+    let descuentoTotal = 0;
+    let montoFinal = 0;
+    
+    descuentoTotal  = monto * descuento / 100;
+    montoFinal = monto - descuentoTotal;
+
+    return console.info(`El descuento de ${descuento}% sobre su compra de ${monto}$ es de ${descuentoTotal}$ y usted debe pagar ${montoFinal}$`)
+}
+
+descuento(1000,20);
+descuento();
+descuento(1000)
+descuento(1000,"20");
+descuento("1000",20);
+descuento(1000,-20); */
+
+
+/* 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020 ).*/
+
+
+/*  const volverFuturo = (fecha = undefined)=>{
+
+    if(fecha === undefined) return console.warn('Olvidaste pasarme la fecha');
+
+    if(!(fecha instanceof Date)) return console.error('El valor ingresado no es una fecha vaildad');
+    
+    let calculoAnios = new Date().getTime() - fecha.getTime();
+    let transMiles = 1000*60*60*24*365;
+    let anios = Math.floor(calculoAnios/transMiles);
+
+    return (Math.sign(anios) === -1)
+    ? console.info(`Faltan ${Math.abs(anios)} años para el ${fecha.getFullYear()}.`)
+    :(Math.sign(anios) === 1)
+     ?console.info(`Pasaron ${anios} años desde ${fecha.getFullYear()}.`)
+     : console-info (`No hay diferencia en el año actual ${fecha.getFullYear()}.`)
+}
+ volverFuturo();
+ volverFuturo(new Date(1984,4,23)) */
+
