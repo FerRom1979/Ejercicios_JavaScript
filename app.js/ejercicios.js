@@ -447,3 +447,71 @@ descuento(1000,-20); */
  volverFuturo();
  volverFuturo(new Date(1984,4,23)) */
 
+
+
+/*  18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5. */
+
+/* const contarLetras = (texto = undefined)=>{
+
+    if (texto === undefined) return console.warn('Ingrese un texto porfavor');
+
+    if (typeof(texto) !== "string") return console.error('Lo ingresado no es un texto');
+
+    let textocopy = texto.replace(/ /g,'');
+    let vocales = new RegExp(/[aeiou]/ig);
+    let consonante = /[^aeiou]/ig;
+    let cantidadVocales = textocopy.match(vocales).length;
+    let cantidadConsonantes = textocopy.match(consonante).length;
+    
+
+
+   return  console.info(`En el texto ${texto} hay ${cantidadVocales} vocales y ${cantidadConsonantes} consonantes`);
+}    
+
+contarLetras();
+contarLetras(true);
+contarLetras('Hola Mundo'); */
+
+
+
+/* 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero. */
+
+/* const validarNombre = (nombre = undefined,apellido = undefined)=>{
+
+    if(nombre === undefined)return console.warn('No completo el nombre');
+
+    if(apellido === undefined)return console.warn('No completo el apellido');
+
+    let regularNombre = /^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/;
+    
+    if ( !regularNombre.test(nombre))return console.error("Nombre no valido");
+
+    if ( !regularNombre.test(apellido))return console.error("Apellido no valido");
+
+    else if(regularNombre.test(nombre) && regularNombre.test(apellido)) {return console.info(`Nombre : "${nombre} ${apellido}" valido`)};
+}
+
+validarNombre("Fernando","Romero");
+validarNombre();
+validarNombre('fernando'); */
+
+
+/* 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero. */
+
+/* const validarEmail = (email= undefined)=>{
+
+    if(email === undefined) return console.warn('Debe ingresar su email');
+
+    const regularEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+
+    if (!regularEmail.test(email))return console.error('Email invalido');
+
+    else return console.info(`email : ${email} aceptado`);
+
+}
+
+validarEmail();
+validarEmail("fernando.romero.com");
+validarEmail("fernando_0135@hotmail.com.ar");
+validarEmail("fernando@hotmail.com.ar"); */
+
