@@ -515,3 +515,113 @@ validarEmail("fernando.romero.com");
 validarEmail("fernando_0135@hotmail.com.ar");
 validarEmail("fernando@hotmail.com.ar"); */
 
+
+
+/* 21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25]. */
+
+/* const numerosCuadrado = (numeros = []) =>{
+
+    if(!numeros) return console.warn('No ingresaste un arreglo de numero');
+
+    if(!(numeros instanceof Array)) return console.error(`${numeros} no es un Arreglo de numero`);
+
+    if(numeros === 0) return console.error('Arreglo vacio');
+
+    //validaciones del profesor
+
+    for(let num of numeros){
+        if(typeof num !== "number") return console.error (`El valor "${num}" no es un número`);
+    }
+    
+    numeros.forEach(numero => { 
+        console.info(numero * 2);
+    });
+
+    //resolucion del profe
+    const newArr = numeros.map(el => el * el);
+
+    return console.info(`Arreglo original ${numeros},\n Arreglo elevado al cuadrado : ${newArr}`);
+}
+
+numerosCuadrador([1,2,3]);
+numerosCuadrador(2);
+numerosCuadrador(['hola','chau','goodbay']);
+ */
+
+
+
+/*  22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60]. */
+
+ const maxMin = (ArregloNum = undefined) =>{
+
+    if(ArregloNum === undefined) return console.info('No ingresaste un Arreglo de numeros');
+
+    if(!(ArregloNum instanceof Array)) return console.error(` no es un Arreglo de numero`);
+
+    if(ArregloNum === 0) return console.error('Arreglo vacio');
+
+    for(let num of ArregloNum){
+        if(typeof num !== "number") return console.error (`El valor "${num}" no es un número`);
+    }
+
+    let numeroAlto = Math.max(...ArregloNum);
+
+    let numeroBajo = Math.min(...ArregloNum);
+
+    const minMax = [];
+    minMax.push(numeroAlto);
+    minMax.push(numeroBajo);
+    return console.info(`El arreglo de maximo y minimo es: [${minMax}]`);
+
+}
+maxMin([1,4,5,99,-60]);
+maxMin();
+maxMin((1,2,3,4,5,6)); 
+
+
+
+
+/* 23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}. */
+
+
+
+/* const paresImpares = (arregloNumeros = undefined) =>{
+
+    if(arregloNumeros === undefined) return console.info('No ingresaste un Arreglo de numeros');
+
+    if(!(arregloNumeros instanceof Array)) return console.error(`Esto no es un Arreglo de numero`)
+
+      if(AarregloNumeros === 0) return console.error('Arreglo vacio');
+
+    for(let num of arregloNumeros){
+        if(typeof num !== "number") return console.error (`El valor "${num}" no es un número`);
+    }
+
+
+    const pares = []
+    const impares = []
+  
+    const parImpar = {
+        pares : pares,
+        impares :impares
+    }
+    
+    for (let i = 0; i< arregloNumeros.length; i++){
+        if (i % 2 === 0 )pares.push(arregloNumeros[i]); 
+        else {impares.push(arregloNumeros[i]) ;}
+    }
+    //return console.log(pares,impares);
+    return console.log(parImpar);
+
+    //resultade del profe
+
+    return console.info({
+       pares:arregloNumeros.filter(mun => num % 2 === 0),
+       impares:arregloNumeros.filter(mun => num % 2 === 1), 
+    })
+    )
+}
+
+paresImpares([1,2,3,4,5,6,7,8,9,0]);
+paresImpares();
+paresImpares(1,2,3,4,5,6,7,8); */
