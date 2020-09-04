@@ -500,7 +500,8 @@ validarNombre('fernando'); */
 
 /* const validarEmail = (email= undefined)=>{
 
-    if(email === undefined) return console.warn('Debe ingresar su email');
+    if(email === undefined email === "") return console.warn('Debe ingresar su email');
+    
 
     const regularEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 
@@ -788,7 +789,7 @@ class Pelicula {
         return true;
     }
     validarLongitudCadena(propiedad,valor,longitud){
-        if(valor.length > longitud)returnconsole.error(`${propiedad} "${valor}" excede el numero de caracteres per,itidos(${longitud}).`);
+        if(valor.length > longitud)return console.error(`${propiedad} "${valor}" excede el numero de caracteres per,itidos(${longitud}).`);
 
         return true;
     }
